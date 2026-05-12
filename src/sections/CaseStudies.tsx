@@ -44,18 +44,24 @@ function LogoTile({
   i: number;
   progress: ReturnType<typeof useScroll>["scrollYProgress"];
 }) {
-  const dir = (i % 3) - 1; // -1, 0, 1
-  const range = 40 + Math.abs(dir) * 30;
+  const dir = (i % 3) - 1;
+  const range = 30 + Math.abs(dir) * 20;
   const y = useTransform(progress, [0, 1], [range * (dir || 1), -range * (dir || 1)]);
+
+  // On mobile (2-col), reset borders for 2-column layout.
+  const mobileBorders = `${i < logos.length - 2 ? "border-b border-hairline" : ""} ${i % 2 === 0 ? "border-r border-hairline" : ""}`;
+  // On md+ (3-col), reset for 3-column layout.
+  const mdBorders = `md:${i < 3 ? "border-b" : "border-b-0"} md:${i % 3 !== 2 ? "border-r" : "border-r-0"}`;
+
   return (
     <motion.div
       style={{ y }}
-      className={`flex flex-col items-center justify-center gap-3.5 p-10 ${
-        i < 3 ? "border-b border-hairline" : ""
-      } ${i % 3 !== 2 ? "border-r border-hairline" : ""}`}
+      className={`flex flex-col items-center justify-center gap-3 p-6 sm:gap-3.5 sm:p-10 ${mobileBorders} ${mdBorders}`}
     >
-      <div className="text-[28px] text-text">{l.mark}</div>
-      <span className="font-mono text-[11px] uppercase tracking-[0.1em] text-dim">{l.name}</span>
+      <div className="text-[20px] text-text sm:text-[24px] md:text-[28px]">{l.mark}</div>
+      <span className="font-mono text-[10px] uppercase tracking-[0.1em] text-dim sm:text-[11px]">
+        {l.name}
+      </span>
     </motion.div>
   );
 }
@@ -66,17 +72,20 @@ export default function CaseStudies() {
     target: ref,
     offset: ["start end", "end start"],
   });
-  const titleX = useTransform(scrollYProgress, [0, 1], [-100, 100]);
+  const titleX = useTransform(scrollYProgress, [0, 1], [-60, 60]);
 
   return (
-    <section ref={ref} className="relative mx-auto max-w-[1440px] px-14 py-32">
-      <Reveal className="mb-12 flex flex-col items-start justify-between gap-8 md:flex-row md:items-end">
-        <div className="flex flex-col gap-6">
+    <section ref={ref} className="relative mx-auto max-w-[1440px] px-5 py-20 md:px-14 md:py-32">
+      <Reveal className="mb-10 flex flex-col items-start justify-between gap-6 md:mb-12 md:flex-row md:items-end md:gap-8">
+        <div className="flex flex-col gap-5 md:gap-6">
           <div className="flex items-center gap-3">
             <span className="h-px w-[18px] bg-gold" />
             <span className="kicker">In production</span>
           </div>
-          <motion.h2 style={{ x: titleX }} className="text-[56px] font-light leading-[60px] tracking-[-0.03em]">
+          <motion.h2
+            style={{ x: titleX }}
+            className="text-[30px] font-light leading-[1.1] tracking-[-0.03em] sm:text-[42px] md:text-[52px] lg:text-[56px] lg:leading-[60px]"
+          >
             Trusted by operators across{" "}
             <span className="font-serif italic text-gold">12 markets</span>.
           </motion.h2>

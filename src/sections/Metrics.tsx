@@ -27,18 +27,20 @@ const metrics = [
 
 export default function Metrics() {
   return (
-    <Reveal className="relative mx-auto max-w-[1440px] px-14 py-10">
+    <Reveal className="relative mx-auto max-w-[1440px] px-5 py-6 md:px-14 md:py-10">
       <div className="grid grid-cols-2 border-y border-hairline md:grid-cols-4">
         {metrics.map((m, i) => (
           <div
             key={m.label}
-            className={`flex flex-col justify-between gap-8 px-7 py-8 ${
-              i !== metrics.length - 1 ? "md:border-r border-hairline" : ""
+            className={`flex flex-col justify-between gap-6 px-5 py-6 md:gap-8 md:px-7 md:py-8 ${
+              i < 2 ? "border-b border-hairline md:border-b-0" : ""
+            } ${i % 2 === 0 ? "border-r border-hairline" : ""} ${
+              i === metrics.length - 1 ? "md:border-r-0" : "md:border-r"
             }`}
           >
             <span className="kicker">{m.label}</span>
             <div>
-              <div className="text-[52px] font-light leading-[52px] tracking-[-0.035em] text-text">
+              <div className="text-[34px] font-light leading-[1] tracking-[-0.035em] text-text sm:text-[42px] md:text-[52px] md:leading-[52px]">
                 {m.value}
               </div>
               <div className="mt-2.5 font-mono text-[11px] tracking-[0.06em] text-dim">{m.note}</div>
