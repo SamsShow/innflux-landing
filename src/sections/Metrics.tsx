@@ -1,4 +1,4 @@
-import { motion, useInView, useMotionValue, useScroll, useTransform, animate } from "framer-motion";
+import { motion, useInView, useMotionValue, useTransform, animate } from "framer-motion";
 import { useEffect, useRef } from "react";
 import { easeOut, Reveal } from "../lib/motion";
 
@@ -25,39 +25,25 @@ const metrics = [
   { label: "Default rate", value: <><CountUp to={0.31} decimals={2} /><span className="text-gold">%</span></>, note: "insured to zero for LPs" },
 ];
 
-function Column({ m, i, progress }: { m: (typeof metrics)[number]; i: number; progress: ReturnType<typeof useScroll>["scrollYProgress"] }) {
-  // Staircase parallax: each column moves at a slightly different rate.
-  const range = 40 + i * 20;
-  const y = useTransform(progress, [0, 1], [range, -range]);
-  return (
-    <motion.div
-      style={{ y }}
-      className={`flex flex-col justify-between gap-8 px-7 py-8 ${
-        i !== metrics.length - 1 ? "md:border-r border-hairline" : ""
-      }`}
-    >
-      <span className="kicker">{m.label}</span>
-      <div>
-        <div className="text-[52px] font-light leading-[52px] tracking-[-0.035em] text-text">
-          {m.value}
-        </div>
-        <div className="mt-2.5 font-mono text-[11px] tracking-[0.06em] text-dim">{m.note}</div>
-      </div>
-    </motion.div>
-  );
-}
-
 export default function Metrics() {
-  const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"],
-  });
   return (
     <Reveal className="relative mx-auto max-w-[1440px] px-14 py-10">
-      <div ref={ref} className="grid grid-cols-2 border-y border-hairline md:grid-cols-4">
+      <div className="grid grid-cols-2 border-y border-hairline md:grid-cols-4">
         {metrics.map((m, i) => (
-          <Column key={m.label} m={m} i={i} progress={scrollYProgress} />
+          <div
+            key={m.label}
+            className={`flex flex-col justify-between gap-8 px-7 py-8 ${
+              i !== metrics.length - 1 ? "md:border-r border-hairline" : ""
+            }`}
+          >
+            <span className="kicker">{m.label}</span>
+            <div>
+              <div className="text-[52px] font-light leading-[52px] tracking-[-0.035em] text-text">
+                {m.value}
+              </div>
+              <div className="mt-2.5 font-mono text-[11px] tracking-[0.06em] text-dim">{m.note}</div>
+            </div>
+          </div>
         ))}
       </div>
     </Reveal>
