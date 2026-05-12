@@ -4,15 +4,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        ground: "#0A1F17",
-        surface: "#0F2820",
-        hairline: "#1A3327",
-        border2: "#2A4536",
+        ground: "#0A0B0D",
+        surface: "#15171B",
+        hairline: "#1F2227",
+        border2: "#2A2D33",
         text: "#FAFAF7",
-        muted: "#9AA8A2",
-        soft: "#C9D5CF",
-        dim: "#8A988F",
-        faint: "#5C6862",
+        muted: "#9AA0A8",
+        soft: "#C9CCD2",
+        dim: "#8A8F98",
+        faint: "#5C6068",
         gold: "#B7F1D5",
         peach: "#5FCDA0",
         magenta: "#2DB4C8",

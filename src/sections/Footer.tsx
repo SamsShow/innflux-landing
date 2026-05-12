@@ -27,7 +27,7 @@ function GiantMark() {
         className="absolute inset-x-5 top-0 h-px md:inset-x-14"
         style={{
           background:
-            "linear-gradient(90deg, transparent 0%, #1A3327 20%, #B7F1D5 50%, #1A3327 80%, transparent 100%)",
+            "linear-gradient(90deg, transparent 0%, #1F2227 20%, #B7F1D5 50%, #1F2227 80%, transparent 100%)",
         }}
       />
       <div className="absolute right-5 top-8 flex items-center gap-2.5 font-mono text-[9px] uppercase tracking-[0.14em] text-faint md:right-14 md:top-12 md:text-[10px]">

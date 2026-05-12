@@ -163,9 +163,9 @@ export function DotOrbit() {
       style={{ width: 260, height: 260 }}
     >
       <svg width={260} height={260} viewBox="-130 -130 260 260" className="absolute inset-0">
-        <circle cx="0" cy="0" r="40" fill="none" stroke="#2A4536" strokeWidth="0.6" />
-        <circle cx="0" cy="0" r="70" fill="none" stroke="#2A4536" strokeWidth="0.6" />
-        <circle cx="0" cy="0" r="100" fill="none" stroke="#2A4536" strokeWidth="0.6" />
+        <circle cx="0" cy="0" r="40" fill="none" stroke="#2A2D33" strokeWidth="0.6" />
+        <circle cx="0" cy="0" r="70" fill="none" stroke="#2A2D33" strokeWidth="0.6" />
+        <circle cx="0" cy="0" r="100" fill="none" stroke="#2A2D33" strokeWidth="0.6" />
       </svg>
       {/* inner ring satellites */}
       <Spin duration={14} className="absolute inset-0">
