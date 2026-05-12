@@ -57,7 +57,7 @@ export function DotSphere({ size = 540 }: { size?: number }) {
             cy="270"
             r="248"
             fill="none"
-            stroke="#FFD24A"
+            stroke="#B7F1D5"
             strokeOpacity="0.22"
             strokeWidth="0.8"
             strokeDasharray="2 8"
@@ -163,9 +163,9 @@ export function DotOrbit() {
       style={{ width: 260, height: 260 }}
     >
       <svg width={260} height={260} viewBox="-130 -130 260 260" className="absolute inset-0">
-        <circle cx="0" cy="0" r="40" fill="none" stroke="#2A2D33" strokeWidth="0.6" />
-        <circle cx="0" cy="0" r="70" fill="none" stroke="#2A2D33" strokeWidth="0.6" />
-        <circle cx="0" cy="0" r="100" fill="none" stroke="#2A2D33" strokeWidth="0.6" />
+        <circle cx="0" cy="0" r="40" fill="none" stroke="#2A4536" strokeWidth="0.6" />
+        <circle cx="0" cy="0" r="70" fill="none" stroke="#2A4536" strokeWidth="0.6" />
+        <circle cx="0" cy="0" r="100" fill="none" stroke="#2A4536" strokeWidth="0.6" />
       </svg>
       {/* inner ring satellites */}
       <Spin duration={14} className="absolute inset-0">
@@ -222,7 +222,7 @@ export function InnfluxRing({ size = 22 }: { size?: number }) {
       style={{
         width: size,
         height: size,
-        border: "1.5px solid #FFD24A",
+        border: "1.5px solid #B7F1D5",
         borderRadius: "50%",
       }}
     >
@@ -230,7 +230,7 @@ export function InnfluxRing({ size = 22 }: { size?: number }) {
         className="absolute"
         style={{
           inset: size * 0.27,
-          border: "1.5px solid #FFD24A",
+          border: "1.5px solid #B7F1D5",
           borderRadius: "50%",
         }}
       />

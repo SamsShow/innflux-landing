@@ -4,9 +4,9 @@ import { Reveal } from "../lib/motion";
 
 const breakdown = [
   { idx: "01", label: "On-chain repayment", value: 92, color: "#FAFAF7" },
-  { idx: "02", label: "Invoice flow (ZKTLS)", value: 86, color: "#FFD24A" },
+  { idx: "02", label: "Invoice flow (ZKTLS)", value: 86, color: "#B7F1D5" },
   { idx: "03", label: "ERP / banking signals", value: 74, color: "#FAFAF7" },
-  { idx: "04", label: "Country & sector risk", value: 58, color: "#FF7A4D" },
+  { idx: "04", label: "Country & sector risk", value: 58, color: "#5FCDA0" },
 ];
 
 function Bar({
@@ -100,7 +100,7 @@ export default function FluxScore() {
               <span>D</span>
               <div className="relative h-1 flex-1 rounded-full bg-hairline">
                 <motion.div
-                  style={{ width: rangeFill, background: "linear-gradient(90deg, #FF7A4D 0%, #FFD24A 100%)" }}
+                  style={{ width: rangeFill, background: "linear-gradient(90deg, #5FCDA0 0%, #B7F1D5 100%)" }}
                   className="absolute left-0 top-0 h-1 rounded-full"
                 />
                 <motion.div style={{ left: needleX }} className="absolute -top-1 h-3 w-0.5 bg-gold" />

@@ -16,8 +16,8 @@ function GiantMark() {
     scrollYProgress,
     [0, 1],
     [
-      "linear-gradient(135deg, #FFD24A 0%, #FFD24A 100%)",
-      "linear-gradient(135deg, #FFD24A 0%, #FF7A4D 100%)",
+      "linear-gradient(135deg, #B7F1D5 0%, #B7F1D5 100%)",
+      "linear-gradient(135deg, #B7F1D5 0%, #5FCDA0 100%)",
     ],
   );
 
@@ -27,7 +27,7 @@ function GiantMark() {
         className="absolute inset-x-5 top-0 h-px md:inset-x-14"
         style={{
           background:
-            "linear-gradient(90deg, transparent 0%, #1F2227 20%, #FFD24A 50%, #1F2227 80%, transparent 100%)",
+            "linear-gradient(90deg, transparent 0%, #1A3327 20%, #B7F1D5 50%, #1A3327 80%, transparent 100%)",
         }}
       />
       <div className="absolute right-5 top-8 flex items-center gap-2.5 font-mono text-[9px] uppercase tracking-[0.14em] text-faint md:right-14 md:top-12 md:text-[10px]">
@@ -49,8 +49,8 @@ function GiantMark() {
               className="absolute -right-6 top-[18%] h-10 w-10 md:-right-12 md:h-20 md:w-20"
             >
               <svg viewBox="-40 -40 80 80" className="h-full w-full">
-                <circle cx="0" cy="0" r="30" fill="none" stroke="#FFD24A" strokeWidth="2" />
-                <circle cx="0" cy="0" r="6" fill="#FFD24A" />
+                <circle cx="0" cy="0" r="30" fill="none" stroke="#B7F1D5" strokeWidth="2" />
+                <circle cx="0" cy="0" r="6" fill="#B7F1D5" />
               </svg>
             </motion.div>
           </span>
@@ -185,7 +185,7 @@ export default function Footer() {
             ))}
             <button
               className="flex h-9 w-9 items-center justify-center rounded-full border border-gold font-mono text-[13px] text-gold"
-              style={{ background: "rgba(255,210,74,0.08)" }}
+              style={{ background: "rgba(183,241,213,0.08)" }}
             >
               ★
             </button>

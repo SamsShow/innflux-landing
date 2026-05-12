@@ -27,7 +27,7 @@ export default function GridBackdrop() {
       >
         <defs>
           <pattern id="grid-dots" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
-            <circle cx="0" cy="0" r="1" fill="#FFD24A" opacity="0.22" />
+            <circle cx="0" cy="0" r="1" fill="#B7F1D5" opacity="0.22" />
           </pattern>
         </defs>
         <rect x="0" y="0" width="100%" height="100%" fill="url(#grid-dots)" />

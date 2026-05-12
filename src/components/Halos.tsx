@@ -14,7 +14,7 @@ export function PeachHalo() {
         className="h-full w-full rounded-full"
         style={{
           background:
-            "radial-gradient(circle, rgba(255,122,77,0.32) 0%, rgba(255,122,77,0.12) 35%, rgba(255,122,77,0) 70%)",
+            "radial-gradient(circle, rgba(95,205,160,0.32) 0%, rgba(95,205,160,0.12) 35%, rgba(95,205,160,0) 70%)",
           filter: "blur(40px)",
         }}
       />
@@ -36,7 +36,7 @@ export function MagentaHalo() {
         className="h-full w-full rounded-full"
         style={{
           background:
-            "radial-gradient(circle, rgba(214,60,255,0.22) 0%, rgba(214,60,255,0.08) 40%, rgba(214,60,255,0) 70%)",
+            "radial-gradient(circle, rgba(45,180,200,0.22) 0%, rgba(45,180,200,0.08) 40%, rgba(45,180,200,0) 70%)",
           filter: "blur(50px)",
         }}
       />

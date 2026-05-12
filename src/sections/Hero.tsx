@@ -75,7 +75,7 @@ export default function Hero() {
             className="pointer-events-none absolute h-[80px] w-[80px] rounded-full sm:h-[100px] sm:w-[100px] lg:h-[120px] lg:w-[120px]"
             style={{
               background:
-                "radial-gradient(circle, rgba(255,210,74,0.55) 0%, rgba(255,210,74,0.1) 60%, transparent 80%)",
+                "radial-gradient(circle, rgba(183,241,213,0.55) 0%, rgba(183,241,213,0.1) 60%, transparent 80%)",
               filter: "blur(8px)",
             }}
           />

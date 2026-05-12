@@ -23,7 +23,7 @@ export default function BigCTA() {
             className="h-full w-full rounded-full"
             style={{
               background:
-                "radial-gradient(circle, rgba(255,210,74,0.22) 0%, rgba(255,210,74,0.06) 35%, transparent 70%)",
+                "radial-gradient(circle, rgba(183,241,213,0.22) 0%, rgba(183,241,213,0.06) 35%, transparent 70%)",
               filter: "blur(30px)",
             }}
           />
